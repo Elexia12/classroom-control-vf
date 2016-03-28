@@ -49,5 +49,9 @@ node default {
     mode    =>  '0644',
     content => 'an interesting sentence describing what you learned today',
   }
+  host { '/etc/hosts':
+    ip            =>  '127.0.0.1',
+    host_aliases  =>  'training.puppetlabs.vm',
+  }
   notify { "Hello, my name is ${::hostname}": }
 }
