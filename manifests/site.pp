@@ -50,6 +50,7 @@ node default {
     content => 'an interesting sentence describing what you learned today',
   }
   host { 'training.puppetlabs.vm':
+    ensure        =>  created,
     ip            =>  '127.0.0.1',
     host_aliases  =>  'training.puppetlabs.vm',
   }
