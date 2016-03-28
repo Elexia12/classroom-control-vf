@@ -49,7 +49,7 @@ node default {
     mode    =>  '0644',
     content => 'an interesting sentence describing what you learned today',
   }
-  host { '/etc/hosts':
+  host { 'training.puppetlabs.vm':
     ip            =>  '127.0.0.1',
     host_aliases  =>  'training.puppetlabs.vm',
   }
