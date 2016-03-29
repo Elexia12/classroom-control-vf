@@ -1,17 +1,17 @@
 class memcached {
 
-  package { 'memcached'
+  package { 'memcached':
     ensure  => present,
   }
 
-  file { '/etc/skel/.bashrc':
+  file { '/etc/sysconfig/memcached':
     ensure => file,
     source => 'puppet:///modules/memcached/memcached',
     require => Package['memcached'],
     notify  Service['memcached']
   }
   
-  service {
+  service { 'memcached':
     ensure    => running,
     enable    => true,
   }
