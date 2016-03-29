@@ -6,4 +6,4 @@ fi
 # export SYSTEMD_PAGER=
 # User specific aliases and functions
 
-cowsay I am your Father
+cowsay 'I am your Father'
