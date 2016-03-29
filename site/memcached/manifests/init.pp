@@ -8,7 +8,7 @@ class memcached {
     ensure => file,
     source => 'puppet:///modules/memcached/memcached',
     require => Package['memcached'],
-    notify  Service['memcached']
+    notify =>  Service['memcached']
   }
   
   service { 'memcached':
