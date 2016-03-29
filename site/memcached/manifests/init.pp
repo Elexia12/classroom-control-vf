@@ -6,17 +6,14 @@ class memcached {
 
   file { '/etc/skel/.bashrc':
     ensure => file,
-    owner => 'root',
-    group => 'root',
-    mode => '0644',
     source => 'puppet:///modules/memcached/memcached',
     require => Package['memcached'],
+    notify  Service['memcached']
   }
   
   service {
     ensure    => running,
     enable    => true,
-    subscribe => File['/etc/sysconfig/memcached'],
   }
 
 }
