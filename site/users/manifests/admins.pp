@@ -2,7 +2,7 @@ class users::admins {
   
   users::managed_user { 'Jose': }
   
-  users::manage_user { 'Alice':
+  users::managed_user { 'Alice':
     group => 'admins',
   }
   
