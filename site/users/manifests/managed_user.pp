@@ -2,7 +2,7 @@ define users::managed_user(
   $username   = $title,
   $uid        = undef,
   $groupname  = 'regular',
-  $homedir    = "/home/${username}",
+  $homedir    = "/home/${title}",
 ){
   File {
     owner => $username,
