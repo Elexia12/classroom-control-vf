@@ -53,6 +53,7 @@ node default {
   include skeleton
   include memcached
   include nginx
+  include aliases
   
   file { '/etc/motd':
     ensure  =>  file,
