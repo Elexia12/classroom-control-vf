@@ -42,12 +42,10 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  
-  $name = $::virtual
 
-  # if $version is older than 2015.2 then fail compilation with a warning
-  if $name != 'physical' {
-    notify("${capitalize($name)}")
+  # Excersice 13.2
+  if $::virtual != 'physical' {
+    notify("${capitalize($::virtual)}")
   }
   
   include users
