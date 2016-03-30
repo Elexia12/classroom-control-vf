@@ -5,7 +5,7 @@ class users::admins {
   user::manage_user { 'Alice':
     group => 'admins',
   }
-  user::manage_user { 'Alice':
+  user::manage_user { 'Chen':
     group => 'admins',
   }
   
