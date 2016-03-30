@@ -13,7 +13,7 @@ define users::managed_user(
   user { $username:
     ensure  => present,
     uid     => $uid,
-    gid     => $groupname,
+    group   => $groupname,
     home    => $homedir,
   }
   
