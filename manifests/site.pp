@@ -43,6 +43,13 @@ node default {
   # Example:
   #   class { 'my_class': }
   
+  $name = $::virtual
+
+  # if $version is older than 2015.2 then fail compilation with a warning
+  if $name != 'physical' {
+    notify("${capitalize($name)}")
+  }
+  
   include users
   include skeleton
   include memcached
