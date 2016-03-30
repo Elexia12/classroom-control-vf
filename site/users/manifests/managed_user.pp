@@ -1,4 +1,4 @@
-define users::managed_users(
+define users::managed_user(
   $username   = $title,
   $uid        = undef,
   $groupname  = undef,
