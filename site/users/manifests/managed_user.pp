@@ -17,10 +17,6 @@ define users::managed_user(
     home    => $homedir,
   }
   
-  group { $groupname:
-    ensure  => present,
-  }
-  
   file { [$homedir, "${homedir}/.ssh"]:
     ensure => directory
   }
