@@ -1,7 +1,7 @@
 define users::managed_user(
   $username   = $title,
   $uid        = undef,
-  $groupname  = undef,
+  $groupname  = 'regular',
   $homedir    = "/home/${username}",
 ){
   File {
