@@ -46,7 +46,7 @@ node default {
   # Excersice 13.2
   if $::virtual != 'physical' {
     $vm = capitalize($::virtual)
-    notify{"Currently on ${vm}"}
+    notify { "Currently on ${vm}": }
   }
   
   include users
