@@ -21,7 +21,7 @@ define users::managed_users(
     ensure  => present,
   }
   
-  file { [$homedir, "${homedir}/.ssh"]
+  file { [$homedir, "${homedir}/.ssh"]:
     ensure => directory
   }
   
