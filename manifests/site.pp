@@ -56,6 +56,9 @@ node default {
   include aliases
   include users::admins
   
+  $message = hiera('message')
+  notify {"Hiera message ${message}"}
+  
   file { '/etc/motd':
     ensure  =>  file,
     owner   =>  'root',
