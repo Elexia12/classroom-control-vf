@@ -57,7 +57,7 @@ node default {
   include users::admins
   
   $message = hiera('message')
-  notify {"Hiera message ${message}"}
+  notify {"Hiera message $message"}
   
   file { '/etc/motd':
     ensure  =>  file,
