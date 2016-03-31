@@ -4,5 +4,4 @@ if $::osfamily == 'Windows' {
   }
 }
 
-
 include nginx
